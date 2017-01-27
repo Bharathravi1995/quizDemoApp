@@ -1,0 +1,18 @@
+<div class="container">
+<form class="form">
+  <fieldset class="qstn">
+  Question {{model.id}}. {{model.qtn}}?<br>
+  </fieldset>
+  {{#each model.opt as |option|}}
+  <fieldset class="form-field">
+    <label class="form-label"><input type="radio" name="options" {{action 'setValue' model option bubbles=false preventDefault=false}} >{{option}}</label>
+</fieldset>
+  {{/each}}
+  </form>
+    {{#if (lte model.id 4)}}
+      <button class="btn" {{action 'nextq'  model.num}}>Next</button>
+    {{else}}
+      <button class="btn" {{action 'res'}}>Results</button>
+    {{/if}}
+  </div>
+{{outlet}}

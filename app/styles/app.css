@@ -1,0 +1,119 @@
+html {
+  background-color:#d3cfc4;
+  color: #5c0d70;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+}
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin-bottom: 0.625em;
+  margin-top: 0;
+  color:#9e242c;
+
+  font-size:24px;
+}
+.form {
+  position: relative;
+  text-align: left;
+  z-index: 1;
+  margin-top:5%;
+  margin-bottom:3%;
+  margin-right:30%;
+  margin-left:40%;
+  background-color:#d3cfc4;
+}
+.form-field {
+  border: 0;
+  margin: 0;
+  margin-bottom: 1.25em;
+  padding: 0;
+}
+.form-label {
+  display: block;
+  color:#9e242c;
+}
+.form-label:hover{
+  color:black;
+}
+.btn
+ {
+  border: 4px solid;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  background-color: #142068;
+border-color: #005c1e;
+  color: #e9e4d8;
+  float:right;
+  margin-bottom:5%;
+  margin-right:30%;
+  margin-left:40%;
+}
+.start{
+  border: 4px solid;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 2;
+  padding: 0 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  background-color: #142068;
+  border-color: #005c1e;
+  color: #e9e4d8;
+  margin-top: 15%;
+  margin-bottom:5%;
+  margin-right:40%;
+  margin-left:40%;
+}
+.start:hover,
+.btn:hover,
+.btn.focus {
+  background-color: #73b8d6;
+  color: black;
+
+}
+.title{
+  font-size: 36px;
+  line-height: 2;
+  text-shadow:4px 4px 4px black;
+  display: inline-block;
+  background-color:#d3cfc4;
+}
+.container{
+background-color:#d3cfc4;
+}
+.qstn{
+  border: 0;
+  margin: 0;
+  margin-bottom: 1.25em;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.result{
+  border: 0;
+  margin: 0;
+  margin-bottom: 1.25em;
+margin-top: 6.25em;
+  padding: 0;
+  font-size: 36px;
+  font-weight: bold
+  margin-top: 45%;
+  font-size: 20px;
+  line-height: 6;
+  float:center;
+  color:#041569;
+}
+body{
+  background-color:#d3cfc4;
+}
+}
