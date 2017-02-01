@@ -1,2 +1,14 @@
 <h1 class="title">Welcome to Quiz app</h1>
+<br>
+{{#each model as |mod|}}
+{{#if (eq mod.freeze false)}}
+<label class="blue">{{mod.id}}</label>
+{{else}}
+  {{#if (eq mod.inp "-")}}
+  <label class="red">{{mod.id}}</label>
+  {{else}}
+  <label class="green">{{mod.id}}</label>
+  {{/if}}
+{{/if}}
+{{/each}}
 {{outlet}}

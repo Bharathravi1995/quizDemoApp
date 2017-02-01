@@ -1,3 +1,5 @@
+
+{{yield}}
 <div class="container">
 <form class="form">
   <fieldset class="qstn">
@@ -5,14 +7,22 @@
   </fieldset>
   {{#each model.opt as |option|}}
   <fieldset class="form-field">
-    <label class="form-label"><input type="radio" name="options" {{action 'setValue' model option bubbles=false preventDefault=false}} >{{option}}</label>
+    {{#if (eq model.freeze true)}}
+        {{#if (eq model.inp option)}}
+          <label class="checked"><input type="radio" name="options" checked disabled >{{option}}</label>
+        {{else}}
+          <label class="unchecked"><input type="radio" name="options"  disabled >{{option}}</label>
+        {{/if}}
+    {{else}}
+          <label class="form-label"><input type="radio" name="options" {{action 'setValue' model option  preventDefault=false}}>{{option}}</label>
+    {{/if}}
 </fieldset>
   {{/each}}
   </form>
     {{#if (lte model.id 4)}}
-      <button class="btn" {{action 'nextq'  model.num}}>Next</button>
+      <button class="btn" {{action 'nextq'  model model.num}}>Next</button>
     {{else}}
-      <button class="btn" {{action 'res'}}>Results</button>
+      <button class="btn" {{action 'res' model}}>Results</button>
     {{/if}}
-  </div>
+</div>
 {{outlet}}

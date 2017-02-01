@@ -1,4 +1,16 @@
 <div class="result">
 You scored {{score}} out of 5!
 </div>
+{{#if isAnswerShowing}}
+  {{#if (eq visited 5)}}
+    {{answers-text mod=model}}
+    <button class="ans" {{action 'hideAns'}}>Hide Answer</button>
+  {{else}}
+    You are not allowed to see the results right now. First try to attend all the questions
+    <br>
+    {{#link-to 'index'}}Start quizzing{{/link-to}}
+  {{/if}}
+{{else}}
+  <button class="ans" {{action 'showAns'}}>Show Answer</button>
+{{/if}}
 {{outlet}}

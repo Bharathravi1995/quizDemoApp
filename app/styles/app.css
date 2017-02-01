@@ -5,6 +5,32 @@ html {
   font-size: 22px;
   line-height: 1.5;
   text-align: center;
+  font-family: arial, sans-serif;
+}
+table{
+  float: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  border-collapse: collapse;
+  color: black;
+  font-size: 22px;
+  line-height: 1.5;
+}
+th {
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 8px;
+}
+td{
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 8px;
 }
 h1, h2, h3, h4 {
   font-weight: bold;
@@ -35,7 +61,7 @@ h1, h2, h3, h4 {
   color:#9e242c;
 }
 .form-label:hover{
-  color:black;
+  color:#034F1A;
 }
 .btn
  {
@@ -61,7 +87,7 @@ border-color: #005c1e;
   border-radius: 4px;
   display: inline-block;
   font-size: 20px;
-  line-height: 2;
+  line-height: 1.5;
   padding: 0 2em;
   text-decoration: none;
   text-transform: uppercase;
@@ -69,16 +95,18 @@ border-color: #005c1e;
   background-color: #142068;
   border-color: #005c1e;
   color: #e9e4d8;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-bottom:5%;
   margin-right:40%;
   margin-left:40%;
 }
+.ans:hover,
+.ans:focus,
 .start:hover,
 .btn:hover,
 .btn.focus {
   background-color: #73b8d6;
-  color: black;
+  color:black;
 
 }
 .title{
@@ -103,7 +131,7 @@ background-color:#d3cfc4;
   border: 0;
   margin: 0;
   margin-bottom: 1.25em;
-margin-top: 6.25em;
+margin-top: 4.25em;
   padding: 0;
   font-size: 36px;
   font-weight: bold
@@ -113,7 +141,67 @@ margin-top: 6.25em;
   float:center;
   color:#041569;
 }
-body{
-  background-color:#d3cfc4;
+:disabled {
+    background-color: #aaa;
+    color: grey;
+    border: 1px solid grey;
+}
+.checked{
+  display: block;
+  color:#034F1A;
+  font-weight: bold;
+}
+.unchecked{
+  color:#575757;
+}
+.red{
+  color:red;
+}
+.green{
+  color:green;
+}
+.blue{
+  color:blue;
+}
+.ans{
+  border: 4px solid;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  background-color: #142068;
+  border-color: #005c1e;
+  color: #e9e4d8;
+  float:center;
+  margin-bottom:5%;
+  margin-right:30%;
+  margin-left:30%;
+}.qtn{
+  text-align: left;
+}
+.box{
+	width:10px;
+	height:10px;
+}
+
+.redc{
+	background:red;
+}
+.greenc{
+	background:green;
+}
+.bluec{
+	background:blue;
+}
+.index{
+  color: black;
+  font-size: 18px;
+  margin-left: 38%;
+  margin-right: 30%;
+  text-align: left;
 }
 }

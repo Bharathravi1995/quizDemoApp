@@ -6,5 +6,6 @@ export default DS.Model.extend({
   opt:DS.attr(),
   cor: DS.attr(),
   inp:DS.attr(),
-  isCorrect:DS.attr('boolean')
+  isCorrect:DS.attr('boolean'),
+  freeze:DS.attr('boolean')
 });

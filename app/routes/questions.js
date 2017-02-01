@@ -2,14 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model(param){
-        return this.store.findRecord('question',param.q_id);
+        single:return this.store.findRecord('question',param.q_id);
+        multiple:return this.store.findAll('question');
     },
     actions:{
-      nextq(argu){
-          this.transitionTo('questions',argu+1);
+      nextq(mod,num){
+        let record=this.store.peekRecord('question',mod.id);
+        record.set('freeze',true);
+        this.transitionTo('questions',num+1);
       },
-      res(){
-          this.transitionTo('results');
+      res(mod){
+        let record=this.store.peekRecord('question',mod.id);
+        record.set('freeze',true);
+        this.transitionTo('results');
       },
       setValue(mod,choice){
         let record=this.store.peekRecord('question',mod.id);
@@ -18,7 +23,7 @@ export default Ember.Route.extend({
         if(iscorrect){
             record.set('isCorrect',true);
           }
-          else{
+        else{
               record.set('isCorrect',false);
             }
           }

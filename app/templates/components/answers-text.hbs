@@ -1,0 +1,22 @@
+
+<table class="table table-bordered" id="table-metabase">
+        <thead>
+            <tr>
+                <th>Q No</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+          {{#each mod as |data|}}
+            <tr>
+                <td>{{data.id}}</td>
+                <td class="qtn">{{data.qtn}}?</td>
+                <td>{{data.inp}}</td>
+                <td>{{data.cor}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+    </table>
+{{yield}}
